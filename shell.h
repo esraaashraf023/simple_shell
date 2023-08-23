@@ -39,16 +39,16 @@ void add_user_local_bin(char *argv[], char *arg);
 char *_strcpy(char *dest, char *src)
 
 {
-int k = 0;
+	int k = 0;
 
-while (src[k] != '\0')
-{
-dest[k] = src[k];
-k++;
-}
-dest[k] = '\0';
+	while (src[k] != '\0')
+	{
+		dest[k] = src[k];
+		k++;
+	}
+	dest[k] = '\0';
 
-return (dest);
+	return (dest);
 }
 /**
  * _strcmp - compare string values
@@ -59,18 +59,18 @@ return (dest);
  */
 int _strcmp(char *s1, char *s2)
 {
-        int i;
+	int i;
 
-        i = 0;
-        while (s1[i] != '\0' && s2[i] != '\0')
-        {
-                if (s1[i] != s2[i])
-                {
-                        return (s1[i] - s2[i]);
-                }
-                i++;
-        }
-        return (0);
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
+		i++;
+	}
+	return (0);
 }
 /**
  * _strlen -  returns the length of a string
@@ -81,13 +81,13 @@ int _strcmp(char *s1, char *s2)
  */
 int _strlen(char *s)
 {
-        int i = 0;
+	int i = 0;
 
-        while (s[i] != '\0')
-        {
-                i++;
-        }
-        return (i);
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 #endif
