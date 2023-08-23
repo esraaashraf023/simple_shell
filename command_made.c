@@ -17,7 +17,7 @@ void interactive_mode(void)
 	{
 		write(STDOUT_FILENO, "$ ", 1);
 		bytes = getline(&input, &input_length, stdin);
-		if (bytes == EOF)
+		if (bytes == -1)
 			perror("Error input\n");
 		return;
 	}
@@ -38,10 +38,10 @@ void interactive_mode(void)
 		argv[j] = command[j];
 	argv[num] = argv[j] = command[j];
 	argv[num] = NULL;
-	execve_commandline(argv);
-	{
+	execute_commandline(argv);
+
 		free(token);
 		free(argv);
 		free(input);
-	}
+	
 }
