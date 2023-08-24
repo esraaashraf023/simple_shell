@@ -19,7 +19,7 @@ void string_token(char *str, char *delimiter, char *argv[])
 
 	if (str != NULL)
 	{
-		len = strlen(str);
+		len = _strlen(str);
 		while (len > 0 && str[len - 1] == ' ')
 			str[--len] = '\0';
 	}

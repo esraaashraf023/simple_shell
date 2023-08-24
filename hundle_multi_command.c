@@ -34,7 +34,7 @@ void hundle_multi_command(char *input_buffer, char *multi_command[])
 
 	if (input_buffer != NULL)
 	{
-		len = strlen(input_buffer);
+		len = _strlen(input_buffer);
 		while (len > 0 && input_buffer[len - 1] == ' ')
 			input_buffer[--len] = '\0';
 	}

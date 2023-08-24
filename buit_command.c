@@ -16,7 +16,7 @@ int built_in_command(char **argv)
 		exit_status = EXIT_SUCCESS;
 		if (argv[1] != NULL)
 		{
-			exit_status = atoi(argv[1]);
+			exit_status = _atoi(argv[1]);
 			if (exit_status < 0)
 				exit(EXIT_FAILURE);
 			exit(exit_status);
@@ -29,7 +29,7 @@ int built_in_command(char **argv)
 		envp = environ;
 		while (*envp != NULL)
 		{
-			write(STDOUT_FILENO, *envp, strlen(*envp));
+			write(STDOUT_FILENO, *envp, _strlen(*envp));
 			write(STDOUT_FILENO, "\n", 1);
 			envp++;
 		}
